@@ -1,0 +1,62 @@
+R3::itab - Perl extension for handling ABAP internal tables
+
+COPYRIGHT
+=========
+
+Copyright (c) 1999, Johan Schoen. All rights reserved.
+
+The perl modules R3, R3::rfcapi, R3::conn, R3::func and R3::itab
+are free software; you may use, modify and redistribute them
+under the same terms as Perl itself.
+
+To use the R3::* modules you will also need the RFCSDK, which is proprietary
+software owned by SAP AG.
+
+INTRODUCTION
+============
+
+R3::itab is an object interface for tables used as parameters in
+RFC function calls. You need R3::rfcapi, R3::conn and R3::func to
+use R3::itab.
+
+REQUIREMENTS
+============
+
+The R3::* modules requires Perl 5, a C compiler and SAP's RFCSDK.
+R3::conn requires R3::rfcapi.
+
+INSTALLATION
+============
+
+You should install R3::rfcapi, R3::conn and R3::func before 
+installing R3::itab.
+
+If you used static linking of R3::rfcapi and created a new perl
+with an other name, you must edit Makefile.PL an add 
+'FULLPERL => "r3perl"' or whatever you called the perl executable.
+
+Installing R3::rfcapi on Linux and other UNIX like systems:
+	$ perl Makefile.PL
+	$ make
+	$ make test
+	$ make install
+You probably need to execute the last command as root.
+
+On NT with VC++:
+	D:\R3>perl Makefile.PL
+	D:\R3>nmake
+	D:\R3>nmake test
+	D:\R3>nmake install
+
+On other platforms:
+Sorry, I do not know. Please tell me if you do.
+
+AUTHOR
+======
+
+R3::itab is written by Johan Schoen, johan.schon@capgemini.se.
+
+TRADEMARK INFORMATION
+=====================
+
+SAP and R/3 are trademarks of SAP AG.
